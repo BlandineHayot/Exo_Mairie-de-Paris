@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; font-family: arial;}
+
+body { background-color: white; }
+
+header { width: 100%; height: 410px; position: relative;}
+
+header #CP { min-width: 100%; min-height: 410px;
+	max-height: 410px; margin: 0 auto;
+	position: absolute; left: 50%; transform: translateX(-50%);
+	z-index: -2;
+}
+header #menulogonav { background-color: #df225a; 
+	width: 100%; height: 60px;
+	position: fixed; top:0; left: 0;z-index: 1;  }
+header div { float: left; width: 230px; height: 60px; 
+	background-color: #df225a;
+	position: fixed; top:0; left: 0;z-index: 2;}
+header #logo {margin: 15px 17px; width: 185px; height: 29px; }
+
+nav { height: 60px; background-color: #df225a; }
+
+nav li{float: left; display: block;}
+nav a{color:white; text-decoration: none; 
+	margin: 20px; line-height: 60px; font-weight: bold;}
+
+section { margin: 40px auto; clear: both;
+	background-color: white; display: flex; flex-wrap: wrap;
+	justify-content: space-between; padding: 0;}
+
+h1 {font-size: 35px; width: 100%; 
+	margin-bottom: 35px;}
+
+article { width: 348px; height: 280px; margin: 5px 0; 
+	padding: 0; background-color: white; float: left; }
+
+.imagesarticles { border-radius: 1%; }
+
+p { margin: 20px 0; text-align: center; }
+
+/* mobile */
+@media (max-width: 800px){
+	section { width: 348px; }
+	header #menuburger { position: fixed; top:0; right: 0;z-index: 2;
+	cursor: pointer; }
+	nav {width: 100%; height: 60px; background-color: #df225a; 
+		position: fixed; top: 60px; left: 0; z-index: 2;
+		margin-bottom: 20px; display:none; 
+		min-width: 630px; }
+	nav ul { width: 70%; margin : 0 auto;
+		display: flex; flex-wrap: wrap;
+		justify-content: space-between; padding: 0; }
+	nav li {float: left; display: block;}
+	nav a { font-size: 0.9em; }
+} 
+
+/* desktop */
+@media (min-width: 801px) {
+	section { width: 720px; }
+	nav { position: fixed; top:0; right: 0; z-index: 2;}
+}
+
+@font-face { 
+	font-family: 'Tekton Pro', sans-serif;
+	src: url ('../font/font.eot');
+	src: url ('../font/font.woff') format('woff');
+	     url('../font/font.svg#tekton-proBold') format('svg');
+	     url('../font/font.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {font-family: 'Tekton Pro';
+   src: url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.eot’);
+   src: url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.eot?#iefix’) format(‘embedded-opentype’),
+        url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.woff2’) format(‘woff2’),
+        url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.woff’) format(‘woff’),
+        url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.ttf’) format(‘truetype’),
+        url(‘/db.onlinewebfonts.com/t/c798b706e458112bb7c323b5390fd259.svg#Tekton Pro’) format(‘svg’);
+
+}
+
+a, h1, p { font-family: 'Tekton Pro', sans-serif; }
+p { font-size: 18px; }
+
